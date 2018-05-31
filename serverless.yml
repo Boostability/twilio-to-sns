@@ -1,0 +1,19 @@
+service: twilio-to-sns
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  region: us-west-2
+  iamRoleStatements:
+    -  Effect: "Allow"
+       Action:
+         - "sns:Publish"
+       Resource: ${opt:sns}
+functions:
+  twiliotosns:
+    handler: handler.publish
+    environment: 
+        SNS_ARN: ${opt:sns}
+    events:
+      - http: POST publish      
+

@@ -1,0 +1,15 @@
+{
+  "name": "twilio-to-sns",
+  "version": "1.0.0",
+  "description": "A simple webhook for twilio",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mason Meyer",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.249.1",
+    "qs": "^6.5.2"
+  }
+}
